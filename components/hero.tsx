@@ -1,12 +1,33 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 export default function Hero() {
+  const [downloadLink, setDownloadLink] = useState('https://apps.apple.com/jp/app/hayaoshi/id1234567890');
+
+  useEffect(() => {
+    // OS判定
+    const userAgent = navigator.userAgent.toLowerCase();
+    
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+      // iOS
+      setDownloadLink('https://apps.apple.com/jp/app/hayaoshi/id1234567890');
+    } else if (/android/.test(userAgent)) {
+      // Android
+      setDownloadLink('https://play.google.com/store/apps/details?id=com.hayaoshi.app');
+    }
+  }, []);
+
   return (
     <section className="relative bg-gradient-to-b from-primary/10 to-white py-20 px-4 sm:py-32">
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center text-5xl">
-            🐦
-          </div>
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663560023736/ccdTSmpHsffWtvzu.png"
+            alt="ハヤオシ"
+            className="w-32 h-32 object-contain"
+          />
         </div>
 
         {/* Title */}
@@ -27,10 +48,12 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#download"
+            href={downloadLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
-            アプリをダウンロード
+            今すぐダウンロード
           </a>
           <a
             href="#features"
