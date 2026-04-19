@@ -29,8 +29,8 @@ export default function HeroV2() {
 
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          遊ぶだけで、<br />
-          気づいたら賢くなってる
+          気づいたら、<br />
+          賢くなってる。
         </h1>
 
         {/* Subheadline */}
@@ -40,8 +40,8 @@ export default function HeroV2() {
 
         {/* Description */}
         <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto leading-relaxed">
-          60秒で世界と戦う。知識×反応速度で勝負。<br />
-          スキマ時間にサッと遊んで、気づいたら学力UP。
+          通学中の5分、寝る前の3分。<br />
+          スマホを開いた瞬間から、遊べる。
         </p>
 
         {/* CTA Button */}
