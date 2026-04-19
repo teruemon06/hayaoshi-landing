@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-primary/10 to-white py-20 px-4 sm:py-32">
+    <section className="relative py-20 px-4 sm:py-32">
       <div className="max-w-4xl mx-auto text-center">
         {/* Logo */}
         <div className="mb-8 flex justify-center">

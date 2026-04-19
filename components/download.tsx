@@ -1,6 +1,6 @@
 export default function Download() {
   return (
-    <section id="download" className="py-20 px-4 sm:py-32 bg-gradient-to-r from-primary/5 to-primary/10">
+    <section id="download" className="py-20 px-4 sm:py-32">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
           今すぐ始めよう
